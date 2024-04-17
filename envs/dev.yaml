@@ -17,17 +17,17 @@ service:
 ingress:
   enabled: true
   className: "nginx"
-  annotations: 
+  annotations:
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     ingress.kubernetes.io/ssl-redirect: "false"
     cert-manager.io/cluster-issuer: letsencrypt-prod
     acme.cert-manager.io/http01-edit-in-place: "true"
   hosts:
-    - host: dev-artemist.faizullablabla.link
+    - host: dev-artemis.zenithcst.net
       paths:
         - path: /
           pathType: ImplementationSpecific
-  tls: 
+  tls:
     - secretName: dev-artemis-tls
       hosts:
-        - dev-artemist.faizullablabla.link
+        - dev-artemis.zenithcst.net
